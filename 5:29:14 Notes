@@ -106,3 +106,7 @@ http: hyper text transfer protocol
       200-299 SUCCESSFUL
 
     man whois command in terminal: will give manual response to inquiry
+
+
+
+    node myscript.js allows you to run js in terminal
