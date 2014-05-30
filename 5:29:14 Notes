@@ -1,0 +1,108 @@
+5/29/14 Notes
+
+sudo -do something as root
+   super user do
+
+su - become super user
+
+   sudo su
+
+Unix Permissions
+
+  ls -lah
+   
+    permissions  username   group   filelist  date created
+
+      permissions:  -|rwx|-rw-|r--   | denotes directory (octet)
+
+         rwx = user (owner), rw- = group, r-- world
+
+
+                                file                     dir
+            r = read
+
+            w = write
+
+            x = execute   run                    list contents
+
+
+Changing Permissions
+
+   2 ways:
+
+     octal:
+
+     r -4, w - 2, x - 1:
+       rwx = 7, rx = 5, r-- = 4, rw- = 6
+
+     chown - to change ownership:  user   g.html(filename)
+   
+        chown - jon:staff (user:group)   filename
+
+
+     shorthand:
+
+       chmod g+r g.html
+
+          [u,g, w] [+,-] [r,w,x]
+
+            ug+rw: owner and group able to read write
+            w-rwx: world not able to read, write, execute
+
+           chmod 6 4 0 *:  6 4 0 for all three - user, group , world
+           chmod w-r *
+
+
+        2 executable types:
+           scripts
+           binaries
+
+          #!(shebang)
+          #!/bin/bash (bourne again shell)
+
+http: hyper text transfer protocol
+
+  what happens when you put a url in a browser's address bar?
+
+    1. browser sends http request (GET-web, POST-web, PUT, DELETE, OPTIONS) to your DNS (Domanin Name Server - IP address).  When you register your domain name the DNS records will tell all the DNS servers in world about your url so will take 20min - 48hrs for all servers to find your url.
+
+    /etc/resolv.conf: checks for name server
+    DHCP - assignes IP address
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+
+
+    NS - Name Server
+    NS1.DIGITALOCEAN.COM
+    NS2.DIGITALOCEAN.COM
+
+      -registrar - ie GoDaddy
+      -DNS records - you can list what domain names go to which server
+      - web hosting
+
+      As an option:
+        name - GoDaddy
+        DNS - Dreamhost
+        Hosting - Digital Ocean, linode.co rackspace.com
+
+
+    2. IP address: 80 (port 80) then sent to web server.  web server has daemons (constantly running process) listening on port 80 which is the http port. (w3c - world wide web consortium dictates ports: 22 ssh, 21 ftp, 23 telnet, 443 https).  Headers (url, cookies, meta data), body is blank.  daemons respond with html, js, css jpg, png. mulitple requests as page is loading html.  
+
+    <Don't google, goDaddy for domain names that you are interested in purchasing.>
+    INSTEAD USE WHOIS XXX.COM FROM TERMINAL
+      query on name itself, response is who owns and name servers
+
+
+    curl -I: download and display whatever request you gave it, the -I is just the headers
+
+
+    dig: ask DNS server to translate into IP address
+
+
+    HTTP Response Codes
+      500-599 SERVER ERROR
+      400 CLIENT ERROR
+      300 REDIRECTS
+      200-299 SUCCESSFUL
+
+    man whois command in terminal: will give manual response to inquiry
