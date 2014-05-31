@@ -71,14 +71,29 @@ http: hyper text transfer protocol
     nameserver 8.8.8.8
     nameserver 8.8.4.4
 
+    webserver purpose is to response to http request from browser
+
+      servers: 2 types
+        -physical box
+        -server daemon service: 4321 http-server
+
+      commonly used servers:
+        - Apache
+        - IIS (microsoft)
 
     NS - Name Server
     NS1.DIGITALOCEAN.COM
     NS2.DIGITALOCEAN.COM
 
-      -registrar - ie GoDaddy
-      -DNS records - you can list what domain names go to which server
+      -registrar - ie GoDaddy, set nameservers for domain name here
+      -DNS records - you can list what domain names go to which server. records set at DNS host
+        -3 types of DNS records
+          - A record
+            - sets hostname to IP address
+          - MX record
+          - C name record
       - web hosting
+      -NS record points to DNS servers
 
       As an option:
         name - GoDaddy
@@ -108,5 +123,34 @@ http: hyper text transfer protocol
     man whois command in terminal: will give manual response to inquiry
 
 
-
     node myscript.js allows you to run js in terminal
+
+
+    vim modes
+    - insert, command
+
+
+    git checkout
+      - revert back to previous commit
+      - branch, switch to different working branch
+      - checking out files
+
+      git checkout development
+        checkout branch called development. puts current repository in development branch
+
+      git checkout books.xml
+        replace with latest version of books.xml
+
+      git checkout d93432 books.xml
+        will revert books.xml to that version back in time, no changes included so need to commit before doing
+
+      git checkout master .
+        checkout everything in master 
+
+      git checkout d92343
+        checkout allows to look at previous commit.  detached head state so can't commit
+
+      git checkout -b fix_login
+        makes new branch called fix_login and goes into it
+
+
