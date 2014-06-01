@@ -228,3 +228,31 @@ http: hyper text transfer protocol
             200 + "2c" = NaN  console.log (a-b)
 
 
+JAVASCRIPT
+
+  Everything is an object
+    Functions are first-class objects
+      Objects have properties and methods
+
+  Global name space
+    object is accessible from anywhere
+
+
+
+  SELF: Self Invoking Anonymous Function
+
+    (function() {
+
+    })();
+
+
+  ALERT
+  
+    alert( );
+
+
+  PROMPT accepts up to 2 arguments
+
+    prompt("msg", default answer);
+
+
