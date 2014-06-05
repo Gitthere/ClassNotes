@@ -1,0 +1,36 @@
+HashTableQuizExample
+
+(function() {
+ 
+  var total_correct = 0;
+ 
+  var questionaire = [
+    {
+      question: "Where were you born?",
+      answer: "Denver"
+    },
+    {
+      question: "What is my fucking cat's name?",
+      answer: "grumpy"
+    },
+    {
+      question: "Ho Brah?",
+      answer: "shoots"
+    },
+    {
+      question: "Like bacon chunky?",
+      answer: "yes"
+    }
+  ];
+ 
+  for (var i = 0; i < questionaire.length; i++) {
+    var answer = prompt(questionaire[i].question)
+ 
+    if (answer === questionaire[i].answer) {
+      total_correct++;
+    }
+  }
+ 
+  alert("Grats broseph, you got: " + total_correct);
+ 
+})();
