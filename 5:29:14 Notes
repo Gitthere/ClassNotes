@@ -18,7 +18,7 @@ tail - output last 10 lines
 
 ls - list files
 
-ls -lah - long, a: shows all files incl hidden, h: human readable
+ls -lah - list all long human readable files, a: shows all files incl hidden, h: human readable
 
 chmod - allows rwx permissions for files
 
@@ -85,6 +85,8 @@ CHANGING PERMISSIONS
            chmod 6 4 0 *:  6 4 0 for all three - user, group , world
            chmod w-r *
 
+           chmod go-wx = r--|r-- (doesnt affect user)
+
 
         2 executable types:
            scripts
@@ -96,24 +98,27 @@ CHANGING PERMISSIONS
 http: hyper text transfer protocol
 
 
-  A.  what happens when you put a url in a browser's address bar?
+  A.  WHAT HAPPENS WHEN YOU PUT A URL IN BROWSER'S ADDRESS BAR?
 
-    1.  browser sends http request (GET-web, POST-web, PUT, DELETE, OPTIONS) to your DNS (Domanin Name Server - IP address).  When you register your domain name the DNS records will tell all the DNS servers in world about your url so will take 20min - 48hrs for all servers to find your url.
+    1.  Domain name translation: request for IP address.  
+
+    2.  GET request to port 80 of webserver.browser sends http request (GET-web, POST-web, PUT, DELETE, OPTIONS) to your DNS (Domanin Name Server - IP address).  When you register your domain name the DNS records will tell all the DNS servers in world about your url so will take 20min - 48hrs for all servers to find your url.
     name resolution to translates to an IP address
 
-    2.  Then GET request sends headers (http status code)
+    Then GET request sends headers (http status code)
 
-    3.  Headers
-        url, cookies, meta
+    3.  webserver responds with Headers (some sort of html - url, cookies, meta)
 
-    4.  webserver processes request and sends response with   Headers and body (html) back to browser
+    webserver processes request and sends response with   Headers and body (html) back to browser
 
-    5.  html renders in browser
+    4.  html renders in browser
 
-    6.  repeats cycle for every asset in the html in order to render in browser
+        loops cycle (from step 1 -4) for every asset in the html in order to render in browser
+
 
     DNS sole purpose:
       translates domain name into IP address
+
 
     /etc/resolv.conf: checks for name server
     DHCP - assignes IP address
@@ -126,7 +131,7 @@ http: hyper text transfer protocol
         -physical box
         -server daemon service: 4321 http-server
 
-      commonly used servers:
+      commonly used WEB servers:
         - Apache (most installed)
         - IIS (microsoft)
         - Nginx 
@@ -168,8 +173,9 @@ http: hyper text transfer protocol
     dig: ask DNS server to translate into IP address
 
     HTTP Verbs
-      GET
-      POST
+      GET  -  most servers can only do this and POST
+      POST -  method: PUT or method DELETE as most 
+              servers can only do GET or POST
       PUT
       DELETE
       OPTIONS - returns types that server handles
@@ -182,8 +188,10 @@ http: hyper text transfer protocol
       100 INFORMATIONAL
 
         200 SUCCESS
-        301 PERMANENT REDIRECT
-        302 FOUND TEMPORARY REDIRECT
+        301 PERMANENT REDIRECT (sever will cache fact 
+            that not there)
+        302 FOUND TEMPORARY REDIRECT (will not show 
+            you know)
         404 NOT FOUND
         403 FORBIDDEN
         500 INTERNAL SERVER ERROR
@@ -254,5 +262,56 @@ JAVASCRIPT
   PROMPT accepts up to 2 arguments
 
     prompt("msg", default answer);
+
+
+DOM - DOCUMENT OBJECT MODEL
+  API for html/xml docs that provides a structure of a document reperesented as a tree and defines the way the structure can be accessed to change structure, style, and content
+
+    model: window, document, html, body, p#para1
+
+    API is for other apps to have access to an app.
+      (Application Programming Interface) A language and message format used by an application program to communicate with the operating system or some other control program such as a database management system (DBMS) or communications protocol. APIs are implemented by writing function calls in the program, which provide the linkage to the required subroutine for execution. Thus, an API implies that a driver or program module is available in the computer to perform the operation or that software must be linked into the existing program to perform the tasks.
+
+
+    getElementById()
+      function
+
+    innerHTML
+      property
+
+
+    EVENTS - type of object that is short lived.  always listening.  could be on window, document.  write script that could trigger events
+
+
+    ARRAY - list of items/elements, can hold other arrays. Properties: length. can assign to a variable.
+      [10, 20, 40, 80]
+      a[0]: first element is 0
+      a.push will give number of elements in string
+
+    HASH TABLE - 
+
+          var ht = {
+                  name:"Jon",
+                  age:31
+                  }
+
+                  ht.name will return Jon
+                  ht['name']will do same thing
+
+    FOR LOOP
+      for (var i = 0; i< 3; i++ ) 
+
+
+    set value to null after every question for Domquiz
+
+
+6:4:14
+
+PRODUCTION (dont work here)
+  Staging - Sandbox : testing (work here)
+  Development - (local environment) (work here)
+
+BACK-UPS
+  Inspect what you expect
 
 
