@@ -315,3 +315,11 @@ BACK-UPS
   Inspect what you expect
 
 
+HASH
+  ONE WAY HASH - algorithm used to encrypt things and make it difficult to crack code
+
+  node MD5
+  crypto in nodejs
+
+    creat hash of Haleiwa
+
