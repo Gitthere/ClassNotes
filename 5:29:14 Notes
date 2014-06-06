@@ -265,7 +265,7 @@ JAVASCRIPT
 
 
 DOM - DOCUMENT OBJECT MODEL
-  API for html/xml docs that provides a structure of a document reperesented as a tree and defines the way the structure can be accessed to change structure, style, and content
+  API for interacting with html/xml docs that provides a structure of a document reperesented as a tree and defines the way the structure can be accessed to change structure, style, and content
 
     model: window, document, html, body, p#para1
 
