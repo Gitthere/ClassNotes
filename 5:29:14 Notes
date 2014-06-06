@@ -323,3 +323,7 @@ HASH
 
     creat hash of Haleiwa
 
+SIAF
+  Self Invoking Anonymous Function
+    Prevents collisions when collaborating with others
+
