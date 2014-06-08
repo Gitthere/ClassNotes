@@ -327,3 +327,14 @@ SIAF
   Self Invoking Anonymous Function
     Prevents collisions when collaborating with others
 
+TERMINAL
+HOW TO CREATE NEW DIRECTORY IN AN EXISTING DIR AND THEN MAKE A FILE INSIDE OF THAT DIR
+
+  pace@paces-MacBook-Air:~/Desktop/DevLeague|
+⇒  mkdir LongestWord/js && touch LongestWord/js/LongestWord.js
+
+    1. state what dir you want new dir(js), to be created 
+       inside of (LongestWord)
+    2. && means to do this as well
+    3. create file (LongestWord.js) and put it at end of path or  
+       where it is going.
