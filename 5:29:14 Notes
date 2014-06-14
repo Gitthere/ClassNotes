@@ -321,7 +321,7 @@ HASH
   node MD5
   crypto in nodejs
 
-    creat hash of Haleiwa
+    create hash of Haleiwa
 
 SIAF
   Self Invoking Anonymous Function
@@ -338,3 +338,35 @@ HOW TO CREATE NEW DIRECTORY IN AN EXISTING DIR AND THEN MAKE A FILE INSIDE OF TH
     2. && means to do this as well
     3. create file (LongestWord.js) and put it at end of path or  
        where it is going.
+
+
+CRACKING THE CODING INTERVIEW BOOK - gayle
+
+
+6:11:14
+
+TDD
+  Test Driven Development - used for data modeling
+    1. Write test
+    2. Run test
+    3. Implement functions/software
+    4. Passing test
+    5. Refactoring. Add comments on code and documentation
+
+BDD
+  Behavior Driven Development - tests for broken software as users will find ways that sw has not accomodated for. features and functionality. use of "should".
+
+    Jasmine BDD 2.0
+
+
+6:12:14
+
+MOCHA AND CHAI DO WHAT JASMINE DOES, BUT WILL ALLOW FOR MORE CUSTOMIZATION. AND WILL ALLOW FOR MORE TDD OR BDD STYLES.
+  USE 'spec' IN MOCHA TO GET MORE DETAIL ON "ASSERT", "EXPECT", "SHOULD" TESTS.
+
+MOCHA - TEST RUNNER, DOESNT DO ANY ASSERTIONS
+  need TEST folder for each dir: .js
+
+CHAI - ASSERTION LIBRARY: SHOULD, ASSERT AND EXPECT
+
+
