@@ -401,6 +401,13 @@ gee-mail-plus
   7. git checkout -b farpot.access.prepopulated data
   8. 
 
+TO PUSH TO DEVELOPMENT BRANCH
+  switch to main development branch
+  git pull origin farpot.developmet
+  gst
+  git merge "mailbox" from the development branch
+  gp
+
     ALWAYS PULL FROM DEVELOPMENT BRANCH FIRST, BEFORE PUSH.
 
 
