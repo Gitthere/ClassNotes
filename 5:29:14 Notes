@@ -267,6 +267,9 @@ JAVASCRIPT
 DOM - DOCUMENT OBJECT MODEL
   API for interacting with html/xml docs that provides a structure of a document reperesented as a tree and defines the way the structure can be accessed to change structure, style, and content
 
+    TREE STRUCTURE
+    each node has one parent except the root parent (window).  nodes can have 0-n children.
+
     model: window, document, html, body, p#para1
 
     API is for other apps to have access to an app.
@@ -354,7 +357,7 @@ TDD
     5. Refactoring. Add comments on code and documentation
 
 BDD
-  Behavior Driven Development - tests for broken software as users will find ways that sw has not accomodated for. features and functionality. use of "should".
+  Behavior Driven Development - tests for broken software as users will find ways that sw has not accomodated for. features and functionality. use of "should". this is what stakeholders want to see.  built from users perspective.
 
     Jasmine BDD 2.0
 
@@ -369,4 +372,54 @@ MOCHA - TEST RUNNER, DOESNT DO ANY ASSERTIONS
 
 CHAI - ASSERTION LIBRARY: SHOULD, ASSERT AND EXPECT
 
+
+
+6:14:14
+
+LIBRARY
+  COLLECTION OF TOOLS. HAS A NAME, VERSION.  IT CAN ALTER THE WAY THAT YOU WRITE YOUR CODE.  YOU DONT WANT TO INCLUDE MULITIPLE CONFLICTING LIBRARIES - THIS IS RESPONSIBILITY OF DEV AS WILL NOT RECEIVE AN ERROR MSG.
+
+    JQuery is a library.
+
+        $ is a selector - shorthand for JQuery
+          $("selector")
+
+          $("#container")
+          $("container.specific") - all files with 'specific'
+          $("p").attr("name"."jon")
+                .fadeOut();
+
+
+gee-mail-plus
+  
+  1. clone /Devleague/C2/gee-mail-plus
+  2. git checkout -b farpot
+  3. git checkout -b farpot.development
+  4. git branch
+  5. git push origin farpot.development
+  6. git push origin farpot
+  7. git checkout -b farpot.access.prepopulated data
+  8. 
+
+    ALWAYS PULL FROM DEVELOPMENT BRANCH FIRST, BEFORE PUSH.
+
+
+6:17:14
+
+Scrum - set of rules based on Agile, short meetings
+  3 roles
+    1. voice of stakeholder - Product Holder
+    2. Developers
+    3. Scrum Master - Project Mangager, servant leader, between 
+       owners and develpers.  makes sure things are done correctly.  
+      planning phase - sprints
+      "what did you do yesterday?"  "What are you doing today?"
+      "what are some issues that may arise?"
+
+Agile - sw development able to make changes to large programs
+
+
+EPIC - large story
+  SPRINT - chapters
+    USER STORY - little things
 
