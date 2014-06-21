@@ -430,3 +430,37 @@ EPIC - large story
   SPRINT - chapters
     USER STORY - little things
 
+
+6:21:14
+
+GIT
+  
+  MASTER BRANCH
+    SHASTIN
+      SHASTIN.DEVELOPMENT (ALL THE GOOD CODE TO BE DIST TO TEAM)
+        SHASTIN.FIXOVERWRITINGINBOX
+        SHASTIN.CLEANHTML (CREATE NEW SPACE TO WORK)
+
+          1. FROM FEATURE BRANCH, CHECKOUT DEVELOPMENT BRANCH
+          2. FROM DEV PULL DEV
+          3. FROM DEV MERGE FEATURE BRANCH
+          4. FROM DEV PUSH DEV BRANCH
+          5. FROM DEV CHECKOUT NEW FEATURE BRANCH (OPTIONAL)
+          6. FROM ALMOST ANY BRANCH, GIT BRANCH -D OLD_FEATURE_BRANCH ( TO DELETE BRANCH)
+
+          WIP - WORK IN PROGRESS IF PUSH CODE NOT WORKING
+
+          m(odify) app.js - not clean so will not keep changes
+            create new branch to backup
+
+            git stash
+            git stash pop - only applies modified changes and removes from list of stashes
+            git stash apply - doesnt remove
+
+  TO WORK ON NEWLY PUSHED BRANCH
+   1. git pull on dev to get the new pushed branch
+   2. git checkout shastin. (goes into new branch and tracks)
+
+
+
+
