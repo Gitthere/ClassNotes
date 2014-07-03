@@ -220,7 +220,7 @@ http: hyper text transfer protocol
       git checkout d93432 books.xml
         will revert books.xml to that version back in time, no changes included so need to commit before doing
 
-      git checkout master .
+      git checkout master 
         checkout everything in master 
 
       git checkout d92343
@@ -441,28 +441,30 @@ GIT
         SHASTIN.FIXOVERWRITINGINBOX
         SHASTIN.CLEANHTML (CREATE NEW SPACE TO WORK)
 
-          ALWAYS DO GIT STATUS FIRST
+          BEFORE EVERYTHING, DO A GIT STATUS
 
           1. FROM FEATURE BRANCH (farpotshket.getNewMessage), CHECKOUT DEVELOPMENT BRANCH
 
-            git checkout farpotshket.development
+              git checkout farpotshket.development
 
-          2. FROM DEVELOPMENT BRANCH, PULL DEVELOPMENT
 
-            git pull origin farpotshket.development
+          2. FROM DEVELOPMENT BRANCH, PULL (from where and what branch) DEV [gpull origin farp.dev]
+
+              git pull origin farpotshket.development
+
 
           3. FROM DEVELOPMENT BRANCH, MERGE FEATURE BRANCH
 
-            git merge farpotshket.getNewMessage
-
-          4. FROM DEVELOPMENT BRANCH, PUSH DEV BRANCH
-
-            git push origin farpotshket.development
+              git merge farpotshket.getNewMessage
 
 
-          ---------   BELOW IS OPTIONAL --------------------
-          
-            
+          4. FROM DEVELOPMENT BRANCH, PUSH (from where and what branch)DEV BRANCH
+
+              git push origin farpotshket.development
+
+
+        ------------ BELOW IS OPTIONAL -------------------      
+
           5. FROM DEV CHECKOUT NEW FEATURE BRANCH (OPTIONAL)
           6. FROM ALMOST ANY BRANCH, GIT BRANCH -D OLD_FEATURE_BRANCH ( TO DELETE BRANCH)
 
@@ -480,6 +482,69 @@ GIT
    2. git checkout shastin. (goes into new branch and tracks)
 
 
+6:25:14
+
+for()
+  to set parameters for for loop. () contains 3 expressions (i=0;i<10;i++)
+
+$.each
 
 
+7:2:14
+
+RECURRSION
+
+  function called within a function.  
+  
+    write function for !3
+
+      1. function factorial(num) { //infinite loop (base case)
+
+            factorial(num+1);
+          }
+
+          factorial (3);
+
+
+      2. function factorial(num) {
+           if (num >10) {
+              return num; (terminal case)
+           } else {
+              return factorial(num + 1);
+           }
+         factorial(3);
+         }
+
+
+      3.
+        > function factorial(num) {
+      ..... console.log(num);
+      ..... if(num < 2) return num;
+      ..... return num*(factorial(num-1));
+      ..... }
+      undefined
+      > console.log(factorial(8));
+      8
+      7
+      6
+      5
+      4
+      3
+      2
+      1
+      40320
+
+      4.
+        var searchPlan = ["nana's", "weirdGuy", "fido", "landlord"];
+
+        function findDoge(searchArea, location) {
+          location = location || null;
+          if (searchArea[location] == "fido") {
+            return "Found Fido!";
+          }
+          location++;
+          return findDoge(searchArea, location);
+        }
+
+        console.log(findDoge(searchPlan));
 
