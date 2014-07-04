@@ -494,7 +494,9 @@ $.each
 
 RECURRSION
 
-  function called within a function.  
+  1. function called in itself  
+  2. base case (is the terminal case)
+  
   
     write function for !3
 
@@ -547,4 +549,52 @@ RECURRSION
         }
 
         console.log(findDoge(searchPlan));
+
+
+      5. function floop(i) {
+            if ( i < 0) {
+              console.log("open " + i);
+              floop(i-1);                   floop(0), floop(1), floop(2) //this part continues after open 
+                                            part finishes, cause still running
+            }
+            console.log("close " +i);
+          return i;
+          }
+          console.log(floop(2));
+
+         open 2
+         open 1
+         close 0
+         close 1
+         close 2
+
+
+
+7:3:14
+
+
+CALLBACK FUNCTION
+
+  1. PASSING IN ANY FUNCTION AS AN ARGUMENT TO ANOTHTER FUNCTION
+  2. FUNCTION IS EXECUTED
+  3. INVOKE CALLBACK USING ();
+
+
+  "do after"
+
+  function findDog (name, then) {
+    //search for dog
+      var found = getDogByName(name);
+      if (found != undefined) {
+      then(found);
+      }
+  }
+
+  findDog("Kasper", function(dog) {
+    //pet
+    //groom
+    //cook
+  }
+
+
 
