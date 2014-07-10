@@ -597,4 +597,135 @@ CALLBACK FUNCTION
   }
 
 
+  DOCUMENT READY
+
+    Description: Specify a function to execute when the DOM is fully loaded.
+
+    While JavaScript provides the load event for executing code when a page is rendered, this event does not get triggered until all assets such as images have been completely received. In most cases, the script can be run as soon as the DOM hierarchy has been fully constructed. The handler passed to .ready() is guaranteed to be executed after the DOM is ready, so this is usually the best place to attach all other event handlers and run other jQuery code. When using scripts that rely on the value of CSS style properties, it's important to reference external stylesheets or embed style elements before referencing the scripts.
+
+    In cases where code relies on loaded assets (for example, if the dimensions of an image are required), the code should be placed in a handler for the load event instead.
+
+    The .ready() method is generally incompatible with the <body onload=""> attribute. If load must be used, either do not use .ready() or use jQuery's .load() method to attach load event handlers to the window or to more specific items, like images.
+
+    All three of the following syntaxes are equivalent:
+
+    $( document ).ready( handler )
+    $().ready( handler ) (this is not recommended)
+    $( handler )
+    There is also $(document).on( "ready", handler ), deprecated as of jQuery 1.8. This behaves similarly to the ready method but if the ready event has already fired and you try to .on( "ready" ) the bound handler will not be executed. Ready handlers bound this way are executed after any bound by the other three methods above.
+
+    The .ready() method can only be called on a jQuery object matching the current document, so the selector can be omitted.
+
+    The .ready() method is typically used with an anonymous function:
+
+
+    $( document ).ready(function() {
+      // Handler for .ready() called.
+    });
+    Which is equivalent to calling:
+
+    $(function() {
+      // Handler for .ready() called.
+    });
+    If .ready() is called after the DOM has been initialized, the new handler passed in will be executed immediately.
+
+
+
+7:9:2014
+
+
+PROJECT - WORKING THROUGH PROCESSES
+
+  SMALLER PIECES
+  TASKS - START WITH THE HARDEST ONES. 
+    FER - FINAL END RESULT (HOW IS SHOULD LOOK OR BEHAVE?) 
+      1. HOW DO I KNOW IF I'VE COMPLETED THIS TASK?
+
+      2. HOW IS IT NOW?
+
+      3. WHAT NEEDS TO BE ADDED OR CHANGED?
+         WHAT INFORMATION DO WE HAVE?
+         WHAT INFORMATION DO WE NEED?
+
+      4. BDD OR TDD - MAKE THE CHANGE AND RUN YOUR TESTS. INSPECT THE RESULTS
+
+      5. IF RESULTS ARE NOT WHAT I EXPECTED, THEN GO TO DEBUG MODE
+
+
+        DEBUG MODE - GOAL: PROOF OF CONCEPT THEN, INTEGRATION
+
+          WHAT DID I JUST WRITE THAT ISN'T RIGHT?
+            REVIEW - (GIT DIF), GIT X, SOURCETREE
+
+            IF YOU SEE NO DIFFERENCE, THEN DO PROOF THAT WHAT YOU'RE WRITING MAKES A DIFFERENCE
+              TOOL: THROW EXCEPTION, CONSOLE LOG('CHECK')
+
+
+        DEBUGGING TOOL BELT
+
+          ISOLATE THE PROBLEM
+            COMMENT OUT ALL TO ISOLATE PROBLEM OR CREATE NEW PROJECT IN DIFFERENT ENVIRONMENT
+
+          RUBBER DUCKY
+            EXPLAIN WHAT HAPPENS ON EVERY LINE TO YOUR RUBBER DUCK SO YOU CAN HEAR THE LOGIC
+            TALK IT OUT LOUD
+
+          WHITEBOARD YOUR PLAN
+            DOES THIS MAKE 100% SENSE TO ME 
+
+          GIT DIFF
+            COMMIT OFTEN SO THAT CAN ISOLATE THE PROBLEM. AFTER EVERY TASK
+
+          GET AWAY
+            TAKE WALK, TAKE NAP
+
+          MAKE SOMETHING ELSE WORK
+
+          MANUAL TRACE
+            LOG CONTRAST.  CONSOLE LOG AFTER EVERY OTHER LINE TO SEE WHERE IT BREAKS IF DOESN'T LOG
+
+          UML, DRAW IT OUT - USE DIFFERENT PART OF YOUR MIND USING DIAGRAMS    
+
+
+          NEW LEARNING
+
+            FIND PATTERNS
+
+            RTFM - LOOK FOR EXAMPLES.  STAY WITHIN THE DOMAIN, DON'T GO TO STACKOVERFLOW
+
+            EXPERIMENT - MAKE IT BREAK
+
+
+
+  JASON'S VIEW
+
+    FIND PARTS THAT HAVEN'T DONE BEFORE - DO HARDEST PARTS FIRST
+
+    PARTS THAT DID BEFORE - BEGIN AT CENTRAL POINT
+
+    WALKING SKELETON APPROACH
+      MAKE BARE BONES WORK
+
+
+    DEBUGGING
+
+      1. PROCESS OF ELIMINATION
+
+      2. UNDERSTANDING THE CODE
+
+        GROK - FULLY UNDERSTAND, BE TOTALLY IMMERSED IN
+
+        MORE WORTHWHILE TO UNDERSTAND WHAT FUNCTIONS ARE DOING
+
+
+
+      1. SINGLE RESPONSIBILITY PRINCIPLE
+         FUNCTION SHOULD ONLY BE RESPONSIBLE FOR DOING ONE THING
+
+
+      2. SEPARATION OF CONCERNS
+
+
+      BREAK EVERYTHING DOWN TO SMALL SCOPES
+
 
