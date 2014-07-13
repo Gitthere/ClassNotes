@@ -729,3 +729,102 @@ PROJECT - WORKING THROUGH PROCESSES
       BREAK EVERYTHING DOWN TO SMALL SCOPES
 
 
+SERVER SIDE SCRIPTS
+
+  WHY USE:
+    UPLOAD IMAGES, CLIENT CAN COMMUNICATE BACK TO SERVER
+    CONTENT GENERATED ON THE FLY IN THE SERVER, MANIPULATE DATA IN SERVER
+
+    SHOW TODAY'S DATE
+    ACCESS DATA BASE
+
+  NODE.JS.ORG - SERVER SIDE PLATFORM
+    SERVER SIDE SCRIPTING - PHP (PERSONAL HOME PAGE, HYPERTEXT PRE-PROCESSOR), RUBY, PERL, JAVA, ASP (ACTIVE SERVER PAGES)
+
+  HTTP VERBS
+    GET     (READ)
+    POST    (CREATE)
+    PUT     (U)
+    DELETE  (DELETE)
+
+  KEY VALUE PAIRS
+    \?foo\=bar\&baz\=20
+
+    GET REQUEST
+      PUTS PARAMETERS IN THE ADDRESS BAR - USER NAME AND PASS WOULD BE VISIBLE
+  
+    POST
+      PUTS PARAMETERS IN REQUEST HEADERS - NOT VISIBLE
+      USE POST TO UPLOAD TO MINIMIZE SIZE
+
+    127.0.0.1 local host, local host
+
+
+    DEMYSTIFYING
+                                REQUEST, RESPONSE
+      server.get('/', function(req,res,next) {//LISTENS FOR '/'
+      console.log('GET request');
+      res.send(req.params);
+      }
+
+      server.post('/', function(req,res,next) {
+      console.log('POST request');
+      res.send(req.body);
+      });
+
+
+      http://   PROTOCOL
+      localhost   DOMAIN NAME HOST
+      1337        PORT
+      ? foo=bar&baz=20  QUERY STRING
+
+
+7:12:14
+
+  //PATH   //ROUTE
+  /USERS/JON.HTML
+
+
+  1. Error: Cannot find module 'restify'
+      need to install restify in terminal via:
+        npm install restify
+
+
+  2. node app.js TO RUN SERVER IN TERMINAL, NEED TO RESTART AFTER EVERY CODE CHANGE
+
+
+  3. <html>
+      <head>
+        
+      </head>
+      <body>
+                                                                  
+        <form action="http://localhost:8080/output" method="POST" enctype="multipart/form-data">
+          <input type="text" name="filename">  //CREATE INPUT BOX W/NAME FILENAME
+          <textarea name="content"></textarea> //CREATE TEXT BOX W/NAME CONTENT
+          <button type="submit">Send</button>  //CREATE BUTTON,  ALLOWS MORE STYLING VS INPUT(TYPE="SUBMIT, 
+                                               //VALUE="SEND".  ALSO COULD USE ('#MYFORM').SUBMIT().
+        </form>
+
+      </body>
+
+          enctype - IS NECESSARY FOR UPLOADING IMAGES AND LONG PIECES OF DATA
+          action - is url path to send data to
+          input - name="" should be variable friendly; maxlength=10 (so users don't write a lot)
+          method - GET OR POST
+
+    4. JS
+                                          (next is OPTIONAL)
+  server.post('/output', function(req,res,next) {
+  console.log(req.body.filename, req.body.content);
+  fs.writeFile(req.body.filename, req.body.content, function (err) { //CREATES NEW FILENAME AND CONTENT AND    
+                                                                    //FILE IN DIRECTORY THAT WORKING IN
+    if (err) throw err;
+    console.log('It\'s saved!');
+  });
+  res.send(req.body.filename +' has been created.');//SENDS RESPONSE TO BROWSER WITH FILENAME AFTER FILE CREATED
+
+
+  DBD
+    DOCUMENT BASED DATASTORE
+      
