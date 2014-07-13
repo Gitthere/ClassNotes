@@ -825,6 +825,7 @@ SERVER SIDE SCRIPTS
   res.send(req.body.filename +' has been created.');//SENDS RESPONSE TO BROWSER WITH FILENAME AFTER FILE CREATED
 
 
-  DBD
+  DBD - no sql
     DOCUMENT BASED DATASTORE
-      
+
+  RDMS - sql
