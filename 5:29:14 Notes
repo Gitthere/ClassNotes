@@ -818,7 +818,7 @@ SERVER SIDE SCRIPTS
   server.post('/output', function(req,res,next) {
   console.log(req.body.filename, req.body.content);
   fs.writeFile(req.body.filename, req.body.content, function (err) { //CREATES NEW FILENAME AND CONTENT AND    
-                                                                    //FILE IN DIRECTORY THAT WORKING IN
+                                                                     //FILE IN DIRECTORY THAT WORKING IN
     if (err) throw err;
     console.log('It\'s saved!');
   });
@@ -829,3 +829,29 @@ SERVER SIDE SCRIPTS
     DOCUMENT BASED DATASTORE
 
   RDMS - sql
+
+
+
+7:17:14
+
+
+WAYS TO POST TO A SERVER
+
+  1. Postman
+  2. Form ["Post"]
+  3. Curl - terminal. used to send information without having to build website, input forms
+
+HTTP = Stateless protocol (do not know identity of requestor), the client needs to delcare the state (format) of the request
+
+  GET      C
+  POST     R
+  PUT      U
+  DELETE   D
+
+REstful resouce is the server
+REST (REpresentational State Transfer) is a model that allows work with data on remote resource
+  /users        GET         List all resources
+  /users        POST        create resource
+  /users/21     GET         Show one        //get the 21st post
+  /users/21     PUT         Update one
+  /users/21     DELETE      Destroy one
