@@ -855,3 +855,181 @@ REST (REpresentational State Transfer) is a model that allows work with data on 
   /users/21     GET         Show one        //get the 21st post
   /users/21     PUT         Update one
   /users/21     DELETE      Destroy one
+
+
+
+7:19:14
+
+
+CRUD operations Items
+  
+  /items        GET          List       Jade Template
+  /items        POST         create     Redirect
+  /items/:id    GET          show       Jade Template
+  /items/:id    GET          Edit       Form
+  /items/:id    PUT          Update     Redirect
+  /items/:id    DEL          Destroy    Redirect
+  /items/:id    GET          New        Form
+
+
+
+  app.get('/tasks/:id/edit') //the colon allows anything to be after the slash, could be 22222 or whatever.  
+                             //if no colon, has to be the exact word that is typed or will not go down path.
+
+
+  template directory - templates/
+  static directory - public /stylesheets/ javascripts/ images/  doesnt need to get access by node js
+
+  requirements:
+    express.js
+    mongoose
+    jade
+
+
+  1.  open express.js API
+      go to guide, create package JSON, cut paste code
+      rename to TooDoo
+        npm info express version and edit to 4.6.1 in code
+          then npm install 
+          ga .
+          then gcmsg after install
+
+          add .gitignore file for  node_modules
+
+          gst, then ga . 
+
+      NEED THESE FOLDERS
+        PUBLIC: IMAGES, JAVASCRIPTS, STYTLESHEETS
+        APP.USE(EXPRESS.STATIC(_DIRNAME + '/PUBLIC'));
+
+      API
+        create new app.js in TooDoo  -  copy code and paste from API to app.js
+          nodemon app.js
+
+        go to local host 3000 and should see hello world
+
+        then gcmsg
+
+
+      CRUD task items
+
+        after parser
+        var methodOverride = require('method-override')
+        // override with POST having ?_method=DELETE app.use(methodOverride('_method'));
+        must come AFTER app.use(bodyParser)
+
+        app.use(bodyParser.json());
+        app.use(bodyParser.urlencoded({
+          extended: true
+        }));
+
+
+
+
+        INDEX
+
+        GET
+
+
+
+        GET /tasks
+        app.get('/', funtion(req, res) {
+
+        })
+        app.set('views', _dirname + '/templates')
+          app.locals.spongebob
+
+          res.render('test.jade', Locals)
+
+
+        NEW
+        GET /tasks/:id
+
+
+
+
+
+        SHOW
+          GET /tasks/:id
+
+
+
+
+
+        CREATE (api request for params)
+          POST /tasks
+            app.post('/tasks', function(req,res) {
+              var task = new TaskItem({
+              title : req.param('title'),  //var bodyParser = require('body-parser');npm install -S body-parser
+              notes : req.param('notes')
+
+              })
+              task.save(function(wert, task) {
+                if(wert) { res.send(500, wert); }
+
+                res.redirect('/');
+              })
+            })
+
+
+
+
+        EDIT
+          GET /tasks/:id
+
+
+
+
+        UPDATE
+          PUT /tasks/:id(long number)
+          app.put('/tasks/:id', function(req,res) {
+            var id = req.param('id');
+            console.log(req.param(id))
+
+            taskItem.findOne({_id: id(long number)}, function() {
+              //body...
+            })
+          })
+
+
+        DELETE
+
+
+
+    app.engine
+
+    npm install -S (save dev) jade
+
+    create templates folder
+      test
+        res.render('test.jade');
+
+    'extends' for templates
+      ../layout.jade
+
+      mixins = 
+        mixin task(t)
+        each
+
+        go to include top left
+
+
+    block content
+      form( action="/tasks", method="POST", enctype="application/x-www-form-urlencoded")
+        p
+          label( for="title_input" ) Title
+          input#title_input( type="text", name="notes", value=task.title )
+        p
+          label( for="notes_input" ) Notes
+          input#notes( type="text", name="notes" )
+        p
+          button Create Task
+
+  for EDIT
+  form( action="/tasks/#{task.id}?_method="PUT", enctype="application/x-www-form-urlencoded")
+
+    
+
+
+
+
