@@ -1028,7 +1028,10 @@ CRUD operations Items
   for EDIT
   form( action="/tasks/#{task.id}?_method="PUT", enctype="application/x-www-form-urlencoded")
 
-    
+
+
+CSS  
+  to check if linked to code, set background color to red and see if renders
 
 
 
