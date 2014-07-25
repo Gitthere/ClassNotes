@@ -975,12 +975,12 @@ CRUD operations Items
 
 
         EDIT
-          GET /tasks/:id
+          GET /tasks/:id  //then render form w/task detail, then redirect to list or show what was updated
 
 
 
 
-        UPDATE
+        UPDATE //
           PUT /tasks/:id(long number)
           app.put('/tasks/:id', function(req,res) {
             var id = req.param('id');
