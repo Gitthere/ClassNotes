@@ -1031,8 +1031,108 @@ CRUD operations Items
 
 
 CSS  
-  to check if linked to code, set background color to red and see if renders
+  to check if linked to code, set background color to red and see if renders  
 
+
+
+
+7:30:14
+
+
+SERVER
+
+  Model
+    For example:
+      User
+      Vehicle
+      Payment
+      Rental
+
+
+  Controller
+
+    controllers are restful, not responsible for figuring out route
+    directs traffic
+    function create
+    function update
+
+    1. handle request
+    2. generally associate with model, and interact with model, NOT DB.
+    3. send response - rendering a view, send http response
+
+
+  View
+
+    markup with templates that gives a way to send response via HTML, back to client
+
+
+
+CLIENT
+
+  sends request to controller on server
+
+
+
+ORM - OBJECT RELATIONAL MODEL
+  
+  regardless of what type of code, database would be able to operate
+
+
+
+SOC - SEPARATION OF CONCERN or SRP - SINGLE RESPONSIBILITY PRINCIPLE
+  
+  Only have code handle one task, older code would have all tasks on the same page and was not broken into specific tasks
+
+
+
+RELATIONAL(SQL) DATABASE MANAGEMENT SYSTEM = RDBMS
+
+  similar to spreadsheet in that made up of rows and columns
+
+  1. RELATIONS
+      1 TO 1  -  has one
+      1 TO MANY - belongs to, has many
+      MANY TO MANY (TRY TO AVOID) - has, and belongs to many
+  2. DATA CONSTRAINTS
+  3. NORMALIZATION
+  4. UNIQUENESS
+  5. DATA TYPES
+  6. CARDINALITY (MANY TO MANY)
+
+
+
+  SQL
+    1. Strict types
+    2. Integrity
+
+
+  NO SQL
+    1. Dynamic types
+    2. 
+
+
+  query:  SELECT - id, name FROM users
+
+
+  
+
+
+SQL - PROJECT
+  Tasks
+    ID - int or Int
+    TITLE - varchar140
+    NOTES - text
+    CHECKED - boolean or tinyint
+    CREATED.AT - Date
+
+  Users
+    ID - int
+    NAME - varchar140
+
+
+  user_id
+
+  sql 5.5.32
 
 
 
