@@ -1136,3 +1136,79 @@ SQL - PROJECT
 
 
 
+OBJECT ORIENTED PROGRAMMING
+  vs PROCEDURAL PROGRAMMING - define function and call later.  line by line. linear format
+
+  1. CLASS - DEFINES AN OBJECT (BLUEPRINT)
+       SUPER CLASS:  UPPER LEVEL CLASSES
+       SUB CLASS:  CLASSES BELOW
+
+
+  2. OBJECT - INSTANCE OF THE CLASS
+
+    ex. CLASS [person]
+
+      Jon is person
+      Alex is person
+
+
+
+  3. PROPERTY - CHARACTERISTICS OF OBJECT
+
+
+
+  4. METHOD - CAPABILITIES OF OBJECT
+
+
+    ex.  var Volvo = {
+
+         property: weight, color
+         method: drive (function), unlock (function)
+
+         }
+
+
+  5. CONSTRUCTOR - METHOD THAT EXECUTES AN INSTANTIATION
+
+
+
+
+  6. INHERITENCE - CLASS CAN INHERIT PROPERTIES AND METHODS OF OTHER CLASSES
+
+    ex. CLASS ANIMAL        >(extend)     CLASS - FELINE     >      CLASS - LION
+              legs                          tail                      mane
+              eyes                          roar()                    aggressive
+              ears                          cute()                    title
+              breathe()                     land()                    pride
+              eat()                                                   rule_kingdom()
+              reproduce()                                             eat_human()
+
+        var simba = new Lion();
+        simba.eat(simba.tail);
+
+
+
+  7. POLYMORPHISM - DIFFERENT CLASSES DEFINE SAME METHODS AND PROPERTIES
+                    able to apply characteristic to other objects that can do same thing
+
+      climber
+      climb()
+
+        monkey climber
+        bear climber
+        lion climber
+
+
+
+  8. NAMESPACES - CONTAINER FOR DEVELOPERS TO BUNDLE RELATED CLASSES USING UNIQUE
+                  APPLICATION, SPECIFIC NAMES (LIKE NODE MODULES)
+
+
+
+  ABSTRACTION
+
+    simba eat - do not need to see how digestion actually works, just need to know can eat
+
+    PRIVATE - don't need to see how 
+    PUBLIC - able to see
+    STATIC - 
