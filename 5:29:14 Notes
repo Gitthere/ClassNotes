@@ -1211,4 +1211,114 @@ OBJECT ORIENTED PROGRAMMING
 
     PRIVATE - don't need to see how 
     PUBLIC - able to see
-    STATIC - 
+    STATIC - properties and methods of the class. is the blueprint that contains how  
+             to create and the characteristics of the instance
+    INSTANCE - properties and methods of class instances /"Objects", but doesn't 
+               contain the blueprint
+
+
+  9. PROTOTYPE - allows us to add property and methods to objects
+
+
+    EXAMPLE CODE BELOW:
+
+    function Animal (name) {//set up animal class
+      this.name = name;
+    }
+
+    function Monkey (name) {//set up Monkey class which inherits from Animal
+      Animal.call(this, name)//links super class Animal and sub class Monkey
+    }
+
+    `
+    //access to Animal prototype chain
+    Monkey.prototype = new Animal();
+
+
+    //adds run to Animal prototype chain
+    Animal.prototype.run = function (){
+      console.log(this.name + ' is running');
+    }
+
+    //set up Fish class which inherits Animal
+    function Fish (name) {
+      Animal.call(this, name)
+    }
+
+    //set up Bird class which inherits Animal
+    function Bird (name) {
+      Animal.call(this, name)
+    }
+
+    //adds fly to Animal prototype chain
+    Bird.prototype.fly = function() {
+      console.log(this.name + ' is flying');
+    }
+
+
+    //adds swim to Animal prototype chain
+    Fish.prototype.swim = function() {
+      console.log(this.name + ' is swimming');
+    }
+
+    //set up Ahi class to which inherits Fish
+    function Ahi (name) {
+      Fish.call(this, name)
+    }
+
+
+    //access to Fish prototype chain
+    Ahi.prototype = new Fish();
+
+
+    //create monkey that will be able to do actions
+    var bozo = new Monkey ('bozo');
+    var daisy = new Monkey ('daisy');
+    bozo.run();//call the run method on bozo
+    daisy.run();
+    console.log(bozo);
+
+    var gucci = new Ahi ('gucci');
+    gucci.swim();
+    console.log(gucci);
+
+    var bubba = new Bird ('bubba');
+    bubba.fly();
+
+
+TOODOO
+  DB OF USERS EACH WITH OWN LISTS OF TASKS
+  ARE YOU LOGGED IN?
+    NO
+
+      SUBMIT - VALIDATION - IS IT VALID?
+        NO
+          REPORT INVALIDATION ERRORS, REDIRECT TO LOGIN
+
+        YES
+
+          AUTHENTICATE
+            NO
+              REPORT ERRORS, REDIRECT TO LOGIN
+
+            YES
+              GO TO TASKS
+
+    YES
+      GO TO TASKS
+
+
+  VALIDATION
+
+    
+
+  AUTHENTICATION - YOU ARE WHO YOU SAY YOU ARE
+
+
+
+  AUTHORIZATION - ACCESS LEVEL, PERMISSION TO ACCESS
+
+    OAUTH - Twitter, github
+      email validation, token, password, fingerprint, DNA
+
+
