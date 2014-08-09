@@ -236,6 +236,14 @@ http: hyper text transfer protocol
             200 + "2c" = NaN  console.log (a-b)
 
 
+HOW TO SET UP JQUERY
+  1. JQUERY.COM AND DOWNLOAD V 1.11.1
+  2. USE WITH CDN, CUT AND PASTE <script src="//code.jquery.com/jquery-1.11.0.min.js">   </script> IN HEAD AT TOP
+
+
+
+
+
 JAVASCRIPT
 
   Everything is an object
@@ -1154,10 +1162,10 @@ OBJECT ORIENTED PROGRAMMING
 
 
   3. PROPERTY - CHARACTERISTICS OF OBJECT
+       EITHER ATTRIBUTES OR VARIABLES
 
 
-
-  4. METHOD - CAPABILITIES OF OBJECT
+  4. METHOD - CAPABILITIES OF OBJECT, function on an object
 
 
     ex.  var Volvo = {
@@ -1271,7 +1279,7 @@ OBJECT ORIENTED PROGRAMMING
     Ahi.prototype = new Fish();
 
 
-    //create monkey that will be able to do actions
+    //create new instance of monkey class that will be able to do actions
     var bozo = new Monkey ('bozo');
     var daisy = new Monkey ('daisy');
     bozo.run();//call the run method on bozo
@@ -1310,7 +1318,7 @@ TOODOO
 
   VALIDATION
 
-    
+
 
   AUTHENTICATION - YOU ARE WHO YOU SAY YOU ARE
 
@@ -1322,3 +1330,40 @@ TOODOO
       email validation, token, password, fingerprint, DNA
 
 
+  SESSION - HOLD INFORMATION PERSISTENTLY THROUGH COOKIES SO DON'T HAVE TO KEEP 
+            LOGGING IN.  SAVES YOUR STATE.  UPON LOGOUT, DESTROYS SESSION
+    STORES DATA -  ex. LAST VISITED - SO THAT DO NOT HAVE TO 
+
+
+
+8:9:14
+
+CONTROL STRUCTURES
+
+  maintain control of exectution until they decide to let it go
+
+  BREAK 
+    breaks out of entire loop
+      if (y == 3), will break out of loop and not log y = 3, or anything after.  if break is after console log, will log y = 3.
+
+    ALSO ABLE TO NAME BLOCKS (myexes : {}) AND BREAK LOOP FROM INSIDE BY NAMING BLOCK YOU WANT TO BREAK OUT OF
+
+
+
+  CONTINUE
+    will bypass any code after, and continue with loop 
+    so will skip to next iteration
+      if (y == 3) continue;  will break out of loop, not log y = 3, and continue
+      with y = 4
+
+
+  NEED TO RETURN IN CURRENT FUNCTION IN ORDER TO BE ABLE TO LOG FUNCTION
+
+    function findexes () {
+      function changex () {
+        return
+      }
+      change();
+      return
+    }
+    console.log (findexes)
