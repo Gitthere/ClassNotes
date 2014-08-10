@@ -1367,3 +1367,29 @@ CONTROL STRUCTURES
       return
     }
     console.log (findexes)
+
+  TO AVOID DUPLICATES IN LOOP
+  for (var i = ); i < 5; i++) {
+    for (var k = i; k < 5; k++) {
+    console.log("mulitply %d and %d, i, k");
+    }
+  }
+
+
+  chain.js
+
+  number.prototype.add = function(b) {
+    return  this + b;
+  };
+
+  number.prototype.subtract = function(b) {
+    return  this - b;
+  };
+
+  number.prototype.toMonkey = function() {
+    return "monkey";
+  }
+
+  var num = 10;                                 //mo, key  //will rtn 2    //rtn 6
+  console.log( num.add(3).subtract(7).toMonkey().split("n").length.toMonkey().length);
+                                                                  //rtn monkey
