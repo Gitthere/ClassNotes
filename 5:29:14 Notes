@@ -206,6 +206,17 @@ http: hyper text transfer protocol
     - insert, command
 
 
+
+  GIT INSTRUCTIONS AFTER SET UP SUBLIME TEXT
+
+      1.  git init
+      2.  ga .
+      3.  gcmsg
+      4.  git remote add origin <url>(ssh from repo created on github.com) 
+      5.  git push -u origin master
+
+
+
     git checkout
       - revert back to previous commit
       - branch, switch to different working branch
@@ -335,8 +346,15 @@ HASH
     create hash of Haleiwa
 
 SIAF
+  (function() {
+    //initialization stuff
+  })();
+
   Self Invoking Anonymous Function
     Prevents collisions when collaborating with others
+    Once function executes, gotten rid of and frees up memory space
+
+
 
 TERMINAL
 HOW TO CREATE NEW DIRECTORY IN AN EXISTING DIR AND THEN MAKE A FILE INSIDE OF THAT DIR
@@ -1393,3 +1411,104 @@ CONTROL STRUCTURES
   var num = 10;                                 //mo, key  //will rtn 2    //rtn 6
   console.log( num.add(3).subtract(7).toMonkey().split("n").length.toMonkey().length);
                                                                   //rtn monkey
+
+
+MIDDLEWARE
+
+  Code inbetween existing sequence of events, such as the request and response, that handles processing of request
+  used for:
+    route handling, writing routing
+    custom logging
+
+
+  //prevent users from going directly to route
+  //they would need to login first before having access
+  router.use(function(req, res, next) {
+    //all routes handled by this router pass through this function
+    if(!req.user){
+    res.redirect('/login');
+    }
+    next();
+  });
+
+
+
+DEBUGGING 8x8BitMap
+  
+  JS********************
+
+  (function() {
+  //initialization stuff
+  var maxLength = 8;
+  var inputString = "18 3C 7E 7E 18 18 18 18";
+
+  function processInputString(inputString) {
+    var outputArray = [];
+    var slitHexArray = inputString.split(" ");
+    // console.log(splitHexArray); //check if splits string
+    for (var i = 0; i < splitHexArray.length; i++) {
+      var currentValue = splitHexArray[i];
+      var convertedValue = parseInt(currentValue, 16).toString(2);
+      var outputPaddedValue = "";
+      var paddingLength = maxLength - convertedValue.length;
+      var tempPadding = "";
+
+      for (var j = 0; j < paddingLength; j++) {
+        tempPadding += "0";
+      }
+
+      outputPaddedValue = tempPadding + convertedValue;
+      // console.log(outputPaddedValue);
+
+      outputArray.push(outputPaddedValue);
+    }
+
+    return outputArray;
+
+  }
+
+  function displayElements(elementArray) {
+    for (var i = 0; i < elementArray.length; i++) {
+      var currentBinaryValue = elementArray[i];
+      var containerElement = document.getElementById('container');
+      var binaryRowElement = document.createElement('div');
+
+      binaryRowElement.innerHTML = currentBinaryValue;
+
+      containerElement.appendChild(binaryRowElement);
+
+    };
+  }
+
+  var outputArray = processInputString(inputString);
+  // console.log(outputArray);
+  displayElements(outputArray);
+
+  })();
+
+
+  HTML*******************
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container", class="container"></div>
+    <script src="js/app.js"></script>
+  </body>
+  </html>
+
+
+
+SET UP FOR WEBSITEBLOG PROJECT
+
+  1. sudo npm i -g express
+  2. express create websiteBlog
+      check to see if file structure is correct and all folders created
+
+
+    
+  
