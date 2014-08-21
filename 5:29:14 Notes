@@ -930,7 +930,7 @@ CRUD operations Items
 
       API
         create new app.js in TooDoo  -  copy code and paste from API to app.js
-          nodemon app.js
+          run nodemon app.js in terminal
 
         go to local host 3000 and should see hello world
 
@@ -1505,10 +1505,68 @@ DEBUGGING 8x8BitMap
 
 SET UP FOR WEBSITEBLOG PROJECT
 
-  1. sudo npm i -g express
-  2. express create websiteBlog
+  1. in terminal sudo npm i -g express
+  2. in terminal express create websiteBlog
       check to see if file structure is correct and all folders created
+  3. in terminal npm install  express, body-parser, mongoose, jade (npm install -S (save dev) jade)
+     method-override
+  4. mongolab.com
+      create new mongoDB deployment
+        var mongoose = require('mongoose');
+
+        set var Scehma = mongoose.Schema
+
+        set new user name and password
+          paste into -  mongoose.connect('mongodb://toodoo_express:toodoo_express@ds027709.mongolab.com:27709/toodoo_express');
 
 
-    
+
+
+DESIGN PATTERNS - A LOOK INTO JQUERY
+
+  What are design patterns
+    - proven ways to solve problems
+    - scalable as they are usually structured and have rules that you should follow
+    - reuseable for similar problems
+
+  CREATIONAL
+
+    focussed on ways to create objects
+      var input = $('<input>');
+
+
+  STRUCTURAL DESIGN PATTERNS
+
+    helpful when figuring out how a system should work
+
+
+  COMPOSITE PATTERN
+
+    groupus of objects can be treated the same way as individual objects of the group
+
+
+  FACADE PATTERN
+
+    provides user with a simple interface, while hiding its underlying complexity
+      i.e. document.ready
+
+
+
+  BEHAVIORAL PATTERNS
+
+    object oriented software systems will have communication between objects. it prescribes different methods
+
+
+
+  OBSERVER PATTERN
+
+    JQuery is keeping track of elements and the functions that should occur when triggered
+    i.e. hover
+
+
+
+  ITERATOR PATTERN
+
+    separates algorithms from containers
+    i.e. $.each
   
