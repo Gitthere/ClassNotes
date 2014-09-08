@@ -206,6 +206,26 @@ http: hyper text transfer protocol
     - insert, command
 
 
+SUBLIME TEXT USER SETTINGS
+
+  OSX: Hit `cmd + ,` to open your user settings
+  Ubuntu: Hit `ctrl + ,` to open your user settings
+
+  add the lines highlighted in green to your file after the `["vintage"],` data --
+
+  This will set your tabs to use spaces, set the size to '2'. The third line is helpful as it lets you scroll past the end of a file, so you aren't stuck looking at the bottom of the screen.
+
+  {
+   ...
+    [
+      "vintage"
+    ],
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "scroll_past_end": true
+  }
+
+
 
   GIT INSTRUCTIONS AFTER SET UP SUBLIME TEXT
 
@@ -1581,3 +1601,54 @@ GIT
   WHEN HAVE ADEQUATE AMOUNT OF WORKING CODE ON DEVELOPMENT BRANCH, GCO MASTER
   THEN GIT MERGE DEVELOPMENT BRANCH
   NOW ABLE TO GP FROM MASTER
+
+
+
+STACK - 4 components: db, server, client and root(computer)
+  LAMP - server side
+  MEAN - client side, not necessary to go to server to change the state of the browser to have new
+         data on page
+    Mongo - db
+    Express and Node - server 
+    Angular - client 
+
+
+Ajax - can show new data without going to database
+
+
+
+Asynchronous - server side.  able to do line 1 and line 2 is not going to wait for line 1 to be done
+
+Synchronous - not able to do line 2 until line 1 is complete (blocking operation)
+
+
+METEOR
+
+  vs website that is more like a book with a call to action
+
+  dont use spa for ecommerce site; will not allow to go back a page and will lose data
+
+  single page application that exchanges data
+
+  Publisher/Subscriber
+
+  connection of database to UI, so when change occurs, both updated
+
+    template.renedered
+
+    
+
+FIND MY IP ADDRESS
+
+  Unix-like OS
+  In many Unix-like operating systems (e.g., Ubuntu, RHEL, OS X, BSD), a shared system administration utility known as ifconfig is available to configure, control, and query TCP/IP network interface parameters from a command-line interface (CLI). Typically, ifconfig can only be used under a superuser account in your terminal.
+
+  To obtain your IP Address from ifconfig, enter the following command:
+
+  ifconfig
+  A list of all your network interfaces will appear. Following the heading of the interface whose IP address you're searching for, you will see a "inet addr:" section containing your IP address.
+
+  You can usually obtain more information with the command:
+
+  man ifconfig
+
